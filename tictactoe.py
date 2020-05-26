@@ -9,16 +9,12 @@ player = "X"
 count = 0   
 game_over = False
 
-def reference():
-    print(" 1 | 2 | 3 ")
-    print(" 4 | 5 | 6 ")
-    print(" 7 | 8 | 9 ")
-    
+#display the layout of the game
 def display_board():
     print("\n")
-    print( " "+board[0] + " | " + board[1] + " | " + board[2]+" ")
-    print( " "+board[3] + " | " + board[4] + " | " + board[5]+" ")
-    print( " "+board[6] + " | " + board[7] + " | " + board[8]+" ")
+    print( " "+board[0] + " | " + board[1] + " | " + board[2]+"\t "+" 1 | 2 | 3 ")
+    print( " "+board[3] + " | " + board[4] + " | " + board[5]+"\t "+" 4 | 5 | 6 ")
+    print( " "+board[6] + " | " + board[7] + " | " + board[8]+"\t "+" 7 | 8 | 9 ")
     print("\n")
 
 def winsituation():
@@ -115,7 +111,7 @@ def tictactoe():
     print("Welcome to the command line version of TIC TAC TOE game")
     num=0
     display_board()
-    reference()
+    
     while not game_over: 
         ret = winsituation()
         if (ret == True):
